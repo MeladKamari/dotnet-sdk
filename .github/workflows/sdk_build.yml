@@ -104,7 +104,7 @@ jobs:
     if: startswith(github.ref, 'refs/tags/v') && !(endsWith(github.ref, '-rc') || endsWith(github.ref, '-dev') || endsWith(github.ref, '-prerelease'))
     steps:
     - name: Download release artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         name: packages
     - name: Publish binaries to github for tags
